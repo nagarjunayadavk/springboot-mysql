@@ -5,8 +5,11 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-@Entity
-@Table(name = "Product")
+import org.springframework.data.elasticsearch.annotations.Document;
+
+//@Entity
+//@Table(name = "Product")
+@Document(indexName = "product", type="default")
 public class Product {
 	@Id
 	@GeneratedValue
